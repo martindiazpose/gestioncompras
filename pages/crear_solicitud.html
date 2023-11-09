@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="http://192.168.80.249/gestioncompras/assets/img/favicon.ico" type="image/x-icon">
+    <title>Crear Solicitud</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//192.168.80.249/gestioncompras/assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <a class="navbar-brand" href="../index.html">
+            <img id="header-logo" src="//192.168.80.249/gestioncompras/assets/img/Etarey.png" alt="Etarey" />
+        </a>
+        <h1>CREAR SOLICITUD</h1>
+        <nav id="header" class="navbar navbar-expand-md fixed-top navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links"
+                aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="links" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="crear_solicitud.html">Crear solicitud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mis_solicitudes.html">Mis Solicitudes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solicitudes_para_aprobar.html">Solicitudes para aprobar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="usuarioDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="usuarioDropdown">
+                            <a class="dropdown-item" href="perfil.html">Perfil</a>
+                            <a id="cerrar-sesion-link" class="dropdown-item" href="#">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="unidad">
+        <form action="http://192.168.80.249/gestioncompras/assets/php/manejar_solicitud.php" method="POST">
+            <div id="unitrabajo">
+                <h2>Unidad de trabajo</h2>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="unidad_de_trabajo" id="mantenimiento" value="Mantenimiento" />
+                    <label class="form-check-label" for="mantenimiento">
+                        Mantenimiento
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="unidad_de_trabajo" id="aseo" value="Aseo" checked />
+                    <label class="form-check-label" for="aseo"> Aseo </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="unidad_de_trabajo" id="lavanderia" value="Lavandería" />
+                    <label class="form-check-label" for="lavanderia">
+                        Lavandería
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="unidad_de_trabajo" id="alimentacion" value="Alimentación" />
+                    <label class="form-check-label" for="alimentacion">
+                        Alimentación
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="unidad_de_trabajo" id="economato" value="Economato" />
+                    <label class="form-check-label" for="economato">
+                        Economato
+                    </label>
+                </div>
+            </div>
+            <hr />
+            <div class="unidad">
+                <div class="container">
+                    <div class="div8">
+                        <h2>Cód. articulo SAP</h2>
+                        <label for="codigo_articulo_sap"></label>
+                        <input class="unidadh2" type="text" name="codigo_articulo_sap" />
+                    </div>
+                    <div class="div1">
+                        <h2>Artículo</h2>
+                        <label for="articulo"></label>
+                        <input class="unidadh2" type="text" name="articulo" />
+                    </div>
+                    <div class="div2">
+                        <h2>Cantidad</h2>
+                        <label for="cantidad"></label>
+                        <input class="unidadh2" type="number" name="cantidad" />
+                    </div>
+                    <div class="div3">
+                        <h2>Material</h2>
+                        <label for="material"></label>
+                        <input class="unidadh2" type="text" name="material" />
+                    </div>
+                    <div class="div4">
+                        <h2>Color</h2>
+                        <label for="color"></label>
+                        <input class="unidadh2" type="text" name="color" />
+                    </div>
+                    <div class="div6">
+                        <h2>Diámetro</h2>
+                        <label for="diametro"></label>
+                        <input class="unidadh2" type="number" name="diametro" />
+                    </div>
+                </div>
+                <hr />
+                <div class="container">
+                    <div class="div1">
+                        <h2 class="unidad">Proveedor sugerido</h2>
+                        <label for="proveedor_sugerido"></label>
+                        <input type="text" name="proveedor_sugerido" />
+                        <h2 class="unidad">Precio estimado</h2>
+                        <label for="precio_estimado"></label>
+                        <input type="text" name="precio_estimado" />
+                    </div>
+                    <div class="div2 select-container">
+                        <label for="centro_coste">Centro de costo</label>
+                        <select class="form-select" id="centro_coste" name="centro_coste" aria-label="Centro de costo">
+                            <option disabled selected>Seleccionar...</option>
+                            <option value="MAN">MAN</option>
+                            <option value="ALI">ALI</option>
+                            <option value="ECO">ECO</option>
+                            <option value="TFP">TFP</option>
+                            <option value="Gtos EPC">Gtos EPC</option>
+                            <option value="Gtos UPR">Gtos UPR</option>
+                            <option value="LAV">LAV</option>
+                            <option value="LIM">LIM</option>
+                            <option value="LLN">LLN</option>
+                            <option value="NN">NN</option>
+                            <option value="VAC">VAC</option>
+                            <option value="VAR">VAR</option>
+                        </select>
+                    </div>
+                    <div class="div7" id="norma-container" style="display: none">
+                        <label for="norma">Norma</label>
+                        <select class="form-select" id="norma" name="norma" aria-label="Norma">
+                            <option disabled selected>Seleccionar...</option>
+                            <option value="Acondicionamiento termico">Acondicionamiento termico</option>
+                            <option value="Cerrajeria">Cerrajeria</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Electrica">Electrica</option>
+                            <option value="Equipamiento estandar">Equipamiento estandar</option>
+                            <option value="IT">IT</option>
+                            <option value="Limpieza">Limpieza</option>
+                            <option value="Mecanica">Mecanica</option>
+                            <option value="Sanitaria">Sanitaria</option>
+                            <option value="Seguridad">Seguridad</option>
+                            <option value="Aseo">Aseo</option>
+                            <option value="Alimentacion">Alimentacion</option>
+                            <option value="Seguridad personal">Seguridad personal</option>
+                            <option value="Jardineria">Jardineria</option>
+                            <option value="Mano de obra">Mano de obra</option>
+                        </select>
+                </div>
+            </div>
+            <hr />
+            <div class="unidad" id="unitrabajo">
+                <h2>Comentarios/detalles del artículo</h2>
+                <textarea name="textarea" cols="50" rows="10"></textarea>
+            </div>
+            <div class="unidad" id="unitrabajo">
+                <input type="file" id="adjuntar-archivo" name="adjuntar-archivo" />
+            </div>
+            <div class="form-check unidad" id="unitrabajo">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                    Notificar por correo electrónico
+                </label>
+            </div>
+            <div id="error-message" class="alert alert-danger" style="display: none">
+                Por favor, completa los campos obligatorios: Artículo, Cantidad y
+                Comentarios/detalles delarticulo.
+            </div>
+            <div class="unidad">
+                <!-- ... (código del formulario y elementos) ... -->
+                <div id="unitrabajo" class="d-grid gap-2 d-md-block btnEnviar">
+                    <button class="btn btn-primary" id="enviar-button" type="submit">
+                        Enviar solicitud
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ventana emergente para mensaje de éxito -->
+            <div id="success-modal" class="modal">
+                <div class="modal-content">
+                    <p>Solicitud enviada exitosamente.</p>
+                    <button id="success-ok">OK</button>
+                </div>
+
+                <script>
+                    // Función para confirmar y cerrar sesión
+                    function confirmarCierreSesion() {
+                        const confirmacion = window.confirm(
+                            "¿Estás seguro de que deseas cerrar la sesión?"
+                        );
+                        if (confirmacion) {
+                            // Redirige al usuario a la página de inicio (index.html)
+                            window.location.href = "../index.html";
+                        }
+                    }
+
+                    // Asigna la función al botón "Cerrar Sesión"
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const cerrarSesionLink =
+                            document.getElementById("cerrar-sesion-link");
+
+                        cerrarSesionLink.addEventListener("click", function (event) {
+                            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+                            confirmarCierreSesion(); // Llama a la función de confirmación de cierre de sesión
+                        });
+                    });
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const enviarButton = document.getElementById("enviar-button");
+                        const errorMessage = document.getElementById("error-message");
+                        const articulo = document.querySelector(".div1 input");
+                        const cantidad = document.querySelector(".div2 input");
+                        const comentarios = document.querySelector(".unidad textarea");
+                        const centroCosto = document.getElementById("centro-coste");
+                        const normaContainer = document.getElementById("norma-container");
+
+                        enviarButton.addEventListener("click", function (event) {
+                            if (
+                                articulo.value.trim() === "" ||
+                                cantidad.value.trim() === "" ||
+                                comentarios.value.trim() === ""
+                            ) {
+                                event.preventDefault();
+                                errorMessage.style.display = "block";
+                            } else {
+                                // Muestra una ventana emergente de confirmación
+                                const confirmed = confirm(
+                                    "¿Estás seguro de que deseas enviar la solicitud?"
+                                );
+                                if (confirmed) {
+                                    alert("Solicitud enviada exitosamente.");
+                                    // Limpia todos los campos después de confirmar el envío
+                                    articulo.value = "";
+                                    cantidad.value = "";
+                                    // Puedes agregar aquí el código para limpiar los demás campos si es necesario
+                                    errorMessage.style.display = "none";
+                                }
+                            }
+                        });
+
+                        centroCosto.addEventListener("change", function () {
+                            if (centroCosto.value === "MAN") {
+                                // Si se selecciona "Mantenimiento", muestra el select de "Norma"
+                                normaContainer.style.display = "block";
+                                // Alinea el contenido a la izquierda
+                                normaContainer.style.textAlign = "left";
+                            } else {
+                                // En caso contrario, oculta el select de "Norma"
+                                normaContainer.style.display = "none";
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

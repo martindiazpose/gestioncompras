@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://192.168.80.249/gestioncompras/assets/img/favicon.ico" type="image/x-icon">
+    <title>Mis solicitudes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//192.168.80.249/gestioncompras/assets/css/style.css" />
+</head>
+
+<body>
+    <div>
+        <header>
+            <a class="navbar-brand" href="../index.html">
+                <img id="header-logo" src="//192.168.80.249/gestioncompras/assets/img/Etarey.png" alt="Etarey" />
+            </a>
+            <h1>SOLICITUDES</h1>
+            <nav id="header" class="navbar navbar-expand-md fixed-top navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links"
+                    aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="links" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="crear_solicitud.html">Crear solicitud</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mis_solicitudes.html">Mis Solicitudes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="solicitudes_para_aprobar.html">Solicitudes para aprobar</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="usuarioDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Usuario
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="usuarioDropdown">
+                                <a class="dropdown-item" href="cerrar_sesion.html">Cerrar Sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="unidad">
+            <div class="unidad">
+                <div id="filter">
+                    <div class="form-group">
+                        <label for="select-solicitante">Solicitante</label>
+                        <select id="select-solicitante" class="form-control">
+                            <option value="" disabled selected>Seleccionar...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="select-asignado">Asignado a</label>
+                        <select id="select-asignado" class="form-control">
+                            <option value="" disabled selected>Seleccionar...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="select-status">Estado</label>
+                        <select id="select-status" class="form-control">
+                            <option value="" disabled selected>Seleccionar...</option>
+                            <option>Aprobado</option>
+                            <option>Rechazado</option>
+                            <option>Pendiente</option>
+                        </select>
+                    </div>
+                    <button id="btn-filtrar" type="button" name="button" class="btn btn-warning btn-sm">
+                        <i class="fas fa-search"></i> Filtrar
+                    </button>
+                </div>
+            </div>
+            <table class="table table table-hover table table-bordered border-primary unidad">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Solicitante</th>
+                        <th scope="col">Detalle</th>
+                        <th scope="col">ID solicitud</th>
+                        <th scope="col">Fecha de creación</th>
+                        <th scope="col">Asignado a:</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha de Aprobación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Marcelo Lozano</td>
+                        <td>Compra de Impresora</td>
+                        <td>001</td>
+                        <td>23/02/2023</td>
+                        <td>Cristian Rodriguez</td>
+                        <td>Pendiente</td>
+                        <td>25/02/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Javier Barrios</td>
+                        <td>Compra de Servidor </td>
+                        <td>002</td>
+                        <td>24/02/2023</td>
+                        <td>Federico Rodriguez</td>
+                        <td>Aprobado</td>
+                        <td>28/02/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ignacio Amorin</td>
+                        <td>Compra de Mesa Ping Pong</td>
+                        <td>003</td>
+                        <td>25/06/2023</td>
+                        <td>Cristian Rodriguez</td>
+                        <td>Rechazado</td>
+                        <td>28/06/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Emilio Romero</td>
+                        <td>Compra de electrodos</td>
+                        <td>004</td>
+                        <td>10/05/2023</td>
+                        <td>Jorge Gaulio</td>
+                        <td>Pendiente</td>
+                        <td>10/05/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Martin Diaz</td>
+                        <td>Compra de cámara Domo</td>
+                        <td>005</td>
+                        <td>15/07/2023</td>
+                        <td>Camilo Falcón</td>
+                        <td>Pendiente</td>
+                        <td>25/07/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Fabian Quesada</td>
+                        <td>Compra de hierros</td>
+                        <td>006</td>
+                        <td>01/08/2023</td>
+                        <td>Cristian Rodriguez</td>
+                        <td>Aprobado</td>
+                        <td>01/08/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Federico Santa Maria</td>
+                        <td>Compra de patchcord RJ45</td>
+                        <td>007</td>
+                        <td>02/08/2023</td>
+                        <td>Jorge Gaulio</td>
+                        <td>Pendiente</td>
+                        <td>02/08/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Federico Santa Maria</td>
+                        <td>Compra de mouse y teclado inalámbricos</td>
+                        <td>008</td>
+                        <td>25/06/2023</td>
+                        <td>Cristian Rodriguez</td>
+                        <td>Rechazado</td>
+                        <td>26/06/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>Marcelo Lozano</td>
+                        <td>Compra de disco de corte</td>
+                        <td>009</td>
+                        <td>15/07/2023</td>
+                        <td>Cristian Rodriguez</td>
+                        <td>Pendiente</td>
+                        <td>25/07/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>Marcelo Lozano</td>
+                        <td>Compra de cable de rulos</td>
+                        <td>010</td>
+                        <td>20/06/2023</td>
+                        <td>Camilo Falcón</td>
+                        <td>Rechazado</td>
+                        <td>21/06/2023</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>Francis Rodriguez</td>
+                        <td>Compra de Lampazos </td>
+                        <td>010</td>
+                        <td>20/06/2023</td>
+                        <td>Camilo Falcón</td>
+                        <td>Rechazado</td>
+                        <td>22/06/2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Script de filtrado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnFiltrar = document.getElementById('btn-filtrar');
+            const selectSolicitante = document.getElementById('select-solicitante');
+            const selectAsignado = document.getElementById('select-asignado');
+            const selectStatus = document.getElementById('select-status');
+
+            // Función para aplicar el filtrado
+            function aplicarFiltrado() {
+                const solicitante = selectSolicitante.value;
+                const asignado = selectAsignado.value;
+                const status = selectStatus.value;
+
+                const filas = document.querySelectorAll('.unidad tbody tr');
+
+                filas.forEach(function (fila) {
+                    const filaSolicitante = fila.querySelector('td:nth-child(2)').textContent;
+                    const filaAsignado = fila.querySelector('td:nth-child(6)').textContent;
+                    const filaStatus = fila.querySelector('td:nth-child(7)').textContent;
+
+                    const cumplirFiltroSolicitante = !solicitante || filaSolicitante === solicitante;
+                    const cumplirFiltroAsignado = !asignado || filaAsignado === asignado;
+                    const cumplirFiltroStatus = !status || filaStatus === status;
+
+                    fila.style.display = cumplirFiltroSolicitante && cumplirFiltroAsignado && cumplirFiltroStatus ? 'table-row' : 'none';
+                });
+            }
+
+            // Generar opciones para los selectores de "Solicitante" y "Asignado a"
+            const filas = document.querySelectorAll('.unidad tbody tr');
+            const uniqueSolicitantes = [...new Set(Array.from(filas).map(fila => fila.querySelector('td:nth-child(2)').textContent))];
+            const uniqueAsignados = [...new Set(Array.from(filas).map(fila => fila.querySelector('td:nth-child(6)').textContent))];
+
+            // Agregar opción "Todos" a los selectores
+            const optionTodos = document.createElement('option');
+            optionTodos.value = '';
+            optionTodos.textContent = 'Todos';
+            selectSolicitante.appendChild(optionTodos.cloneNode(true));
+            selectAsignado.appendChild(optionTodos.cloneNode(true));
+            selectStatus.appendChild(optionTodos.cloneNode(true));
+
+            uniqueSolicitantes.forEach(solicitante => {
+                const option = document.createElement('option');
+                option.value = solicitante;
+                option.textContent = solicitante;
+                selectSolicitante.appendChild(option);
+            });
+
+            uniqueAsignados.forEach(asignado => {
+                const option = document.createElement('option');
+                option.value = asignado;
+                option.textContent = asignado;
+                selectAsignado.appendChild(option);
+            });
+
+            // Agregar evento al botón de filtrar
+            btnFiltrar.addEventListener('click', aplicarFiltrado);
+        });
+
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
